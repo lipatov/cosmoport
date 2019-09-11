@@ -77,7 +77,7 @@ public class Ship {
         this.prodDate = prodDate;
     }
 
-    public Boolean getUsed() {
+    public Boolean isUsed() {
         return isUsed;
     }
 
