@@ -14,7 +14,7 @@ public interface ShipService {
 
     List<Ship> getAllShips(Specification<Ship> specification);
 
-    Ship createShip(Ship requestShip);
+    Ship createShip(Ship ship);
 
     Ship getShip(Long id);
 

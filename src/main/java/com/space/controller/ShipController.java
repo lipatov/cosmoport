@@ -89,6 +89,7 @@ public class ShipController {
     @ResponseBody
     public Ship addShip(@RequestBody Ship ship) {
         return service.createShip(ship);
+
     }
 
     @GetMapping(value = "/ships/{id}")
@@ -104,12 +105,12 @@ public class ShipController {
     @ResponseBody
     public Ship editShip(@PathVariable(value = "id") String id, @RequestBody Ship ship) {
         Long longId = service.checkAndParseId(id);
+
         return service.editShip(longId, ship);
     }
 
     @DeleteMapping(value = "/ships/{id}")
     @ResponseStatus(HttpStatus.OK)
-
     public void deleteShip(@PathVariable(value = "id") String id) {
         Long longId = service.checkAndParseId(id);
         service.deleteById(longId);
